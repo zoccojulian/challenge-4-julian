@@ -36,8 +36,8 @@
 }
 
 .header__login{
-    border: 1.5px solid #2A7AE4;
-    color: #2A7AE4;
+    border: 1.5px solid var(--azul);
+    color: var(--azul);
     height: 100%;
     width: 40%;
     max-width: 166px;

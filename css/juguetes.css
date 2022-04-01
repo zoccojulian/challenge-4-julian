@@ -1,0 +1,29 @@
+
+
+.juguetes__header{
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.juguete__header-titulo{
+    color: var(--gris-texto);
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.juguete__header-botton{
+    color: var(--azul);
+    display: flex;
+    align-items: center;
+    gap: .2rem;
+    font-weight: 700;
+
+}
+
+.juguete__header-botton img{
+    height: 12px;
+
+}
