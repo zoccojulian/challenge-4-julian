@@ -56,3 +56,7 @@ button{
 a:hover, button:hover {
     cursor: pointer;
 }
+
+a{
+	text-decoration: none;
+}
