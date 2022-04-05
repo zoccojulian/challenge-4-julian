@@ -6,7 +6,15 @@
     height: 72px;
     align-items: center;
     padding: 1rem;
+    background: var(--texto-blanco);
+    position: fixed;
+    transition: transform 0.4s;
 }
+
+.header__arriba{
+    transform: translateY(-100%);
+}
+
 
 .header__cabeza{
     display: flex;
@@ -39,6 +47,12 @@
     font-family: 'Raleway', sans-serif;
     font-size: 1em;
     font-weight: 400;
+}
+
+.header__login:hover{
+    background: var(--azul);
+    color: var(--texto-blanco);
+    transition: 500ms;
 }
 
 .header__hamburguesa img{
@@ -129,6 +143,7 @@
     .header__login{
         max-width: none;
         width: 13vw;
+        font-size: 1.5em;
     }
 }
 

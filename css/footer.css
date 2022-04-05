@@ -122,6 +122,7 @@
         align-items: center;
         align-items:flex-start;
         padding: 1rem 2rem;
+        justify-content: space-between;
     }
 
     .footer__seccion{
@@ -140,6 +141,7 @@
 
     .footer__contacto{
         width: 60%;
+        max-width: 550px;
         padding-top: 0;
 
     }
@@ -170,8 +172,34 @@
         margin-left: 5rem;
     }
 
+    .footer__empresa__links a{
+        font-size: 1.2em;
+        font-weight: 500;
+    }
+
     .footer__contacto{
         width: 50%;
+    }
+
+    .form__nombre-label {
+        font-size: 1.2rem;
+        left: 1rem;
+        top: 1.2rem;
+
+    }
+
+    .form__nombre-input{
+        height: 65px;
+        padding-top: 1.5rem;
+        padding-left: 1.2rem;
+        font-size: 1.2em;
+     }
+
+     .form__mensaje textarea{
+        height: 90px;
+        padding-left: 1rem;
+        padding-top: 1.2rem;
+        font-size: 1.2rem;
     }
 
 
