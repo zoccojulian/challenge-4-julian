@@ -36,7 +36,39 @@
 }
 
 .header__input{
-    display: none;
+    position: absolute;
+    height: 50px;
+    width: 70%;
+    align-items: center;
+    top:80px;
+    right:15px;
+    transition: transform 0.4s;
+}
+
+.header__input-fuera{
+    transform: translateX(120%);
+}
+
+.header__input-texto{
+    width: 100%;
+    border: none;
+    border-radius: 50px;
+    color:var();
+    background: var(--fondo-verde-claro);
+    padding-left: 1rem;
+    padding-right: 2.5rem;
+    height: 70%;
+}
+
+.header__input-boton{
+    position: absolute;
+    width: 25px;
+    right: 5px;
+    top:5px
+}
+
+.header__input-boton img{
+    width: 100%;
 }
 
 .header__login{
@@ -88,6 +120,12 @@
         position: relative;
         height: 100%;
         width: 50%;
+        top: 0;
+        right: 0;
+    }
+
+    .header__input-fuera{
+        transform: none;
     }
 
     .header__input-texto{
@@ -104,6 +142,7 @@
         right: 0px;
         top: 50%;
         transform: translateY(-50%);
+        width: 37px;
     }
 
     .header__input-boton img{
@@ -138,6 +177,10 @@
 
     .header__input-texto{
         font-size: 1.5em;
+    }
+
+    .header__input-boton{
+        width: 50px;
     }
 
     .header__login{
