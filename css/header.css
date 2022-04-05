@@ -8,6 +8,7 @@
     padding: 1rem;
     background: var(--texto-blanco);
     position: fixed;
+    top: 0;
     transition: transform 0.4s;
 }
 
@@ -103,7 +104,6 @@
         right: 0px;
         top: 50%;
         transform: translateY(-50%);
-
     }
 
     .header__input-boton img{
