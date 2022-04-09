@@ -38,15 +38,15 @@
 .header__input{
     position: absolute;
     height: 50px;
-    width: 70%;
+    width: 40%;
     align-items: center;
     top:80px;
-    right:15px;
+    right: 75px;
     transition: transform 0.4s;
 }
 
 .header__input-fuera{
-    transform: translateX(120%);
+    transform: translateX(160%);
 }
 
 .header__input-texto{
@@ -63,7 +63,7 @@
 .header__input-boton{
     position: absolute;
     width: 25px;
-    right: 5px;
+    right: -45px;
     top:5px
 }
 

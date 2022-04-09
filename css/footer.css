@@ -55,6 +55,7 @@
 .footer__form{
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 
@@ -85,13 +86,13 @@
 }
 
 .form__mensaje{
-    width: 100%;
     padding: .5rem 0;
 }
 
 .form__mensaje textarea{
+    box-sizing: border-box;
     width: 100%;
-    height: 70px;
+    height: 100px;
     font-family: 'Raleway', sans-serif;
     padding: .2rem .8rem;
 }
@@ -164,7 +165,7 @@
 
     .footer__seccion{
         flex-direction:row;
-        justify-content: flex-end;
+        width: 50%;
     }
 
     .footer__empresa__links{
@@ -179,6 +180,7 @@
 
     .footer__contacto{
         width: 50%;
+        max-width: none;
     }
 
     .form__nombre-label {
