@@ -28,19 +28,20 @@
     font-size: .8em;
 }
 
-.boton{
-    box-sizing: border-box;
+.banner__boton{
+    display: flex;
+    justify-content: center;
     border: 1px solid var(--azul);
     background: var(--azul);
     width: 30%;
     max-width: 100px;
-    padding:.5rem 0;
-    text-align: center;
+    padding:.7rem 0;
     color: var(--texto-blanco);
     font-size: .7em;
+    font-weight: 300;
 }
 
-.boton:hover{
+.banner__boton:hover{
     background: var(--texto-blanco);
     color: var(--azul);
     transition: 500ms;
@@ -63,8 +64,8 @@
     }
     
     .banner__boton{
-        height: 11vw ;
         width: 18%;
+        padding:1rem 0;
         max-width: none;
         font-size: 1em;
         max-width: 150px;
@@ -91,13 +92,9 @@
 
     .banner__boton{
         max-width: 230px;
-        max-height: 77px;
-        height: 4.5vw ;
+        padding:1.5rem 0;
         font-size: 1.8em;
         width: 15%;
-
-
-        
     }
 
 }

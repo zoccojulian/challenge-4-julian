@@ -72,14 +72,16 @@
 }
 
 .header__login{
+    display: flex;
     border: 1.5px solid var(--azul);
     color: var(--azul);
     height: 100%;
     width: 40%;
     max-width: 166px;
-    font-family: 'Raleway', sans-serif;
     font-size: 1em;
     font-weight: 400;
+    align-items: center;
+    justify-content: center;
 }
 
 .header__login:hover{

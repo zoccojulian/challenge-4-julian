@@ -97,6 +97,25 @@
     padding: .2rem .8rem;
 }
 
+
+.form__enviar{
+    box-sizing: border-box;
+    border: 1px solid var(--azul);
+    background: var(--azul);
+    width: 30%;
+    max-width: 100px;
+    padding:.5rem 0;
+    text-align: center;
+    color: var(--texto-blanco);
+    font-size: .7em;
+}
+
+.form__enviar:hover{
+    background: var(--texto-blanco);
+    color: var(--azul);
+    transition: 500ms;
+}
+
 .footer__desarrollador{
     display: flex;
     flex-direction: column;
