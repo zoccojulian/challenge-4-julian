@@ -60,7 +60,11 @@
     margin-right: .2rem;  
 }
 
-.productos__venta .productos__venta-articulo:nth-child(5), .productos__venta .productos__venta-articulo:nth-child(6){
+/*.productos__venta .productos__venta-articulo:nth-child(5), .productos__venta .productos__venta-articulo:nth-child(6){
+    display: none;
+}*/
+
+.ultimos__productos{
     display: none;
 }
     
@@ -126,7 +130,7 @@
     
     }
 
-    .productos__venta .productos__venta-articulo:nth-child(5), .productos__venta .productos__venta-articulo:nth-child(6){
+    .productos__venta .ultimos__productos{
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
