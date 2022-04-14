@@ -56,6 +56,7 @@
     .producto__imagen{
         width: 45%;
         height: 35vh;
+        min-height: 166px;
     }
 
     .producto__imagen img{
