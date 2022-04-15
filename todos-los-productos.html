@@ -13,6 +13,7 @@
     <link href="./css/header.css" rel="stylesheet">
     <link href="./css/banner.css" rel="stylesheet">
     <link href="./css/productos.css" rel="stylesheet">
+    <link href="./css/todos-los-productos/all-product.css" rel="stylesheet">
     <link href="./css/footer.css" rel="stylesheet">
 </head>
 
@@ -29,19 +30,10 @@
         <button class="header__hamburguesa"><img src="./img/Icone_lupa.png" alt="Icono Lupa"></button>
     </header>
     <main>
-        <section class="banner">
-            <h2 class="banner__titulo">Abril Promocional</h2>
-            <h3 class="banner__bajada">Productos seleccionados con 33% de descuento</h3>
-            <a href="#consolas" class="banner__boton">Ver consolas</a>
-        </section>
-
-        <section class="productos starwar">
+        <section class="productos__todos">
             <div class="productos__header">
-                <h3 class="producto__header-titulo">Star Wars</h3>
-                <a href="todos-los-productos.html" class="productos__header-link">
-                    Ver Todo  
-                    <img src="./img/felcha.png" alt="Icono Flecha">
-                </a>
+                <h3 class="producto__header-titulo">Todos los productos</h3>
+                <a href="agregar-producto.html" class="producto__header__link">Agregar producto</a>
             </div>
             <div class="productos__venta">
                 <div class="productos__venta-articulo">
@@ -80,17 +72,6 @@
                     <h4 class="producto__venta-precio">$ 60,00</h4>
                     <a class="producto__venta-link" href="producto.html">Ver producto</a>
                 </div>
-            </div>
-        </section>
-        <section class="productos consolas" id="consolas">
-            <div class="productos__header">
-                <h3 class="producto__header-titulo">Consolas</h3>
-                <a href="todos-los-productos.html" class="productos__header-link">
-                    Ver Todo  
-                    <img src="./img/felcha.png" alt="Icono Flecha">
-                </a>
-            </div>
-            <div class="productos__venta">
                 <div class="productos__venta-articulo">
                     <img class="producto__venta-img" src="./img/productos/consolas/consola1.png" alt="">
                     <h3 class="producto__venta-titulo">Producto XYZ</h3>
@@ -127,17 +108,6 @@
                     <h4 class="producto__venta-precio">$ 60,00</h4>
                     <a class="producto__venta-link" href="producto.html">Ver producto</a>
                 </div>
-            </div>
-        </section>
-        <section class="productos diversos">
-            <div class="productos__header">
-                <h3 class="producto__header-titulo">Diversos</h3>
-                <a href="todos-los-productos.html" class="productos__header-link">
-                    Ver Todo  
-                    <img src="./img/felcha.png" alt="Icono Flecha">
-                </a>
-            </div>
-            <div class="productos__venta">
                 <div class="productos__venta-articulo">
                     <img class="producto__venta-img" src="./img/productos/diversos/despertador wifi.png" alt="">
                     <h3 class="producto__venta-titulo">Despertador WIFI</h3>
@@ -175,7 +145,6 @@
                     <a class="producto__venta-link" href="producto.html">Ver producto</a>
                 </div>
             </div>
-        </section>
     </main>
 
     <footer class="footer">
@@ -214,9 +183,10 @@
 
     <script src="./js/header-animaciones.js"></script>
     <script src="./js/banner-animaciones.js"></script>
-    
 
     <!–– borrar, solo para probar con localstorange ––>
     <script src="./js/control_producto.js"></script>
+
+
 </body>
 </html>
