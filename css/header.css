@@ -9,6 +9,7 @@
     background: var(--texto-blanco);
     position: fixed;
     top: 0;
+    z-index: 1;
     transition: transform 0.4s;
 }
 

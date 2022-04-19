@@ -50,8 +50,6 @@
     color: var(--gris-texto);
 }
 
-
-
 .footer__form{
     display: flex;
     flex-direction: column;
@@ -74,10 +72,13 @@
     color: var(--gris-texto);
 }
 
+
 .input__padron{
     border:none;
     border-bottom: 1px solid var(--texto-input-gris);
 }
+
+
 
 .form__nombre-input{
    height: 50px;
@@ -129,7 +130,6 @@
     font-size: 1em;
     font-weight: 500;
 }
-
 
 
 

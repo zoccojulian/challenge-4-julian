@@ -14,6 +14,7 @@
     <link href="./css/producto/producto.css" rel="stylesheet">
     <link href="./css/productos.css" rel="stylesheet">
     <link href="./css/footer.css" rel="stylesheet">
+    <link href="./css/mensaje-error/mensaje-error.css" rel="stylesheet">
     
 </head>
 
@@ -107,10 +108,12 @@
                 <form class="footer__form">
                     <div class="form__nombre">
                         <label class="form__nombre-label" for="nombre">Nombre</label>
-                        <input class="form__nombre-input input__padron" type="text" id="nombre"  required minlength="4" maxlength="50">
+                        <input class="form__nombre-input input__padron input" type="text" id="nombre" required maxlength="40" data-input="nombre_footer">
+                        <span class="mensaje__error"></span>
                     </div>
                     <div class="form__mensaje">
-                        <textarea class="input__padron" placeholder="Escribe tu mensaje"></textarea>
+                        <textarea class="input__padron input" placeholder="Escribe tu mensaje" required maxlength="120" data-input="mensaje_footer"></textarea>
+                        <span class="mensaje__error"></span>
                     </div>
                     <button class="form__enviar">Enviar Mensaje</button>
                 </form>
@@ -124,6 +127,7 @@
 
 
     <script src="./js/header-animaciones.js"></script>
+    <script type="module" src="./js/validaciones/valida-input.js"></script>
 
 
     

@@ -13,6 +13,7 @@
     <link href="./css/header.css" rel="stylesheet">
     <link href="./css/agregar-producto/agregar-producto.css" rel="stylesheet">
     <link href="./css/footer.css" rel="stylesheet">
+    <link href="./css/mensaje-error/mensaje-error.css" rel="stylesheet">
 </head>
 
 <body class="page">
@@ -38,19 +39,23 @@
                     <div class="agregar__form__imagen">
                         <div class="agregar__imagen-div" id="box__imagen"></div>
                         <label for="input__imagen" class="input__image-label"> Elegir archivo</label>
-                        <input type="file" class="agregar__imagen" id="input__imagen">
+                        <input type="file" class="agregar__imagen input" id="input__imagen" data-input="imagen_agregar_producto" accept="image/*">
+                        <span class="mensaje__error"></span>
                     </div>
                     <div class="agregar__form__nombre">
                         <label for="agregar__nombre" class="agregar__form__nombre-label agrear_input__label">Nombre del producto</label>
-                        <input type="text" class="agregar__form__nombre-input agregar__input" id="agregar__nombre">
+                        <input type="text" class="agregar__form__nombre-input agregar__input input" id="agregar__nombre" maxlength="20" required data-input="nombre_agregar_producto">
+                        <span class="mensaje__error"></span>
                     </div>
                     <div class="agregar__form__precio">
                         <label for="agregar__precio" class="agregar__form__precio-label agrear_input__label">Precio del producto</label>
-                        <input type="text" class="agregar__form__precio-input agregar__input" id="agregar__precio">
+                        <input type="number" class="agregar__form__precio-input agregar__input input" id="agregar__precio" pattern="^\d+[,]\d{2}$" required data-input="precio_agregar_producto">
+                        <span class="mensaje__error"></span>
                     </div>
                     <div class="agregar__form__descripcion">
                         <label for="agregar__descripcion" class="agregar__form__descripcion-label agrear_input__label">Descripción</label>
-                        <textarea  class="agregar__descripcion agregar__input" id="agregar__descripcion"></textarea>
+                        <textarea  class="agregar__descripcion agregar__input input" id="agregar__descripcion" maxlength="150" required data-input="descripcion_agregar_producto"></textarea>
+                        <span class="mensaje__error"></span>
                     </div>
 
                     <div class="agregar__form__enviar">
@@ -81,10 +86,12 @@
                 <form class="footer__form">
                     <div class="form__nombre">
                         <label class="form__nombre-label" for="nombre">Nombre</label>
-                        <input class="form__nombre-input input__padron" type="text" id="nombre"  required minlength="4" maxlength="50">
+                        <input class="form__nombre-input input__padron input" type="text" id="nombre" required maxlength="40" data-input="nombre_footer">
+                        <span class="mensaje__error"></span>
                     </div>
                     <div class="form__mensaje">
-                        <textarea class="input__padron" placeholder="Escribe tu mensaje"></textarea>
+                        <textarea class="input__padron input" placeholder="Escribe tu mensaje" required maxlength="120" data-input="mensaje_footer"></textarea>
+                        <span class="mensaje__error"></span>
                     </div>
                     <button class="form__enviar">Enviar Mensaje</button>
                 </form>
@@ -97,6 +104,7 @@
     </footer>
     <script src="./js/header-animaciones.js"></script>
     <script src="./js/agregar-producto-mostrar-imagen.js"></script>
+    <script type="module" src="./js/validaciones/valida-input.js"></script>
     
 </body>
 </html>

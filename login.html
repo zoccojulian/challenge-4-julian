@@ -7,12 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alura Geek</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="./css/reset.css" rel="stylesheet">
     <link href="./css/colores.css" rel="stylesheet">
     <link href="./css/page.css" rel="stylesheet">
     <link href="./css/header.css" rel="stylesheet">
     <link href="./css/login/login-formulario.css" rel="stylesheet">
     <link href="./css/footer.css" rel="stylesheet">
+    <link href="./css/mensaje-error/mensaje-error.css" rel="stylesheet">
+    <link href="./css/login/login__error.css" rel="stylesheet">
+
 </head>
 
 <body class="page">
@@ -33,13 +37,19 @@
             <div class="login__titulo">
                 <h3>Iniciar Sesión</h3>
             </div>
+            <div class="login__error">
+                <i class="fa-solid fa-circle-xmark login__error-msj"></i>
+                <span class="login__error-msj">El usuario y/o password es incorrecto</span>
+            </div>
             <div class="login__box">
                 <form class="login__form">
                     <div class="login__form__nombre">
-                        <input type="email" class="login__form__input" placeholder="Escriba su correo electrónico" required>
+                        <input type="email" class="login__form__input input" id="login__form__email" placeholder="Escriba su correo electrónico" pattern="^[a-zA-Z0-9_.-]+@([a-zA-Z0-9]+\.)+([a-zA-Z]{2,4})" required data-input="email_login">
+                        <span class="mensaje__error"></span>
                     </div>
                     <div class="login__form__clave">
-                        <input type="password" class="login__form__input" placeholder="Escriba su contraseña" requiered>
+                        <input type="password" class="login__form__input input" id="login__form__password" placeholder="Escriba su contraseña" required data-input="password_login">
+                        <span class="mensaje__error"></span>
                     </div>
                     <button class="login__form__entrar">Entrar</button>
                 </form>
@@ -65,10 +75,12 @@
                 <form class="footer__form">
                     <div class="form__nombre">
                         <label class="form__nombre-label" for="nombre">Nombre</label>
-                        <input class="form__nombre-input input__padron" type="text" id="nombre"  required minlength="4" maxlength="50">
+                        <input class="form__nombre-input input__padron input" type="text" id="nombre" required maxlength="40" data-input="nombre_footer">
+                        <span class="mensaje__error"></span>
                     </div>
                     <div class="form__mensaje">
-                        <textarea class="input__padron" placeholder="Escribe tu mensaje"></textarea>
+                        <textarea class="input__padron input" placeholder="Escribe tu mensaje" required maxlength="120" data-input="mensaje_footer"></textarea>
+                        <span class="mensaje__error"></span>
                     </div>
                     <button class="form__enviar">Enviar Mensaje</button>
                 </form>
@@ -80,5 +92,7 @@
         </secction>
     </footer>
     <script src="./js/header-animaciones.js"></script>
+    <script type="module" src="./js/validaciones/valida-input.js"></script>
+    <script type="module" src="./js/login/validacion-usuario.js"></script>
 </body>
 </html>
