@@ -1,9 +1,9 @@
 import { usuarios } from "./usuarios.js";
 
 
-const btnLogin = document.querySelector(".login__form__entrar");
+const formularioLogin = document.querySelector(".login__form");
 
-btnLogin.addEventListener("click",(event) => {
+formularioLogin.addEventListener("submit",(event) => {
     event.preventDefault();
 
     const emailIngresado = document.querySelector("#login__form__email").value;
@@ -21,6 +21,7 @@ btnLogin.addEventListener("click",(event) => {
         document.querySelector(".login__error").classList.add("input__invalido");
     }else{
         document.querySelector(".login__error").classList.remove("input__invalido");
+        window.location.href = "usuario-productos.html";
     }
 
 });

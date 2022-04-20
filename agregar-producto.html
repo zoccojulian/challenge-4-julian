@@ -40,7 +40,9 @@
                         <div class="agregar__imagen-div" id="box__imagen"></div>
                         <label for="input__imagen" class="input__image-label"> Elegir archivo</label>
                         <input type="file" class="agregar__imagen input" id="input__imagen" data-input="imagen_agregar_producto" accept="image/*">
-                        <span class="mensaje__error"></span>
+                    </div>
+                    <div class="falta__carga__archivo">
+                        <span class="mensaje__error archivo__faltante">Debe seleccionar un archivo de imagen para cargar en el producto</span>
                     </div>
                     <div class="agregar__form__nombre">
                         <label for="agregar__nombre" class="agregar__form__nombre-label agrear_input__label">Nombre del producto</label>
@@ -103,7 +105,7 @@
         </secction>
     </footer>
     <script src="./js/header-animaciones.js"></script>
-    <script src="./js/agregar-producto-mostrar-imagen.js"></script>
+    <script src="./js/agregar-producto/agregar-producto.js"></script>
     <script type="module" src="./js/validaciones/valida-input.js"></script>
     
 </body>
