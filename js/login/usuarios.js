@@ -26,7 +26,7 @@ const btnSalir = () => {
 
 const btnAgregarProducto = () => {
     const btnAgregar = document.querySelector(".producto__header__link");
-    btnAgregar.style.visibility = "visible";
+    btnAgregar.style.display = "flex";
 }
 
 export const controlUsuarioOk = {

@@ -1,11 +1,10 @@
 import { controlUsuarioOk } from "./usuarios.js";
 
 
-
 if(controlUsuarioOk.verUsuarioOnline()){
-    controlUsuarioOk.btnSalir();
+    controlUsuarioOk.btnSalir()
 
-    if (window.location.pathname === "/todos-los-productos.html"){
+    if (document.querySelector(".productos__todos")){
         controlUsuarioOk.btnAgregarProducto();
     };
 }
