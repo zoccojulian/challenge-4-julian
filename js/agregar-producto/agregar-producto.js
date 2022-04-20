@@ -35,7 +35,7 @@ formAgregarProducto.addEventListener("submit", (evento) => {
         document.querySelector(".archivo__faltante").parentElement.classList.add("input__invalido");
 
     }else{
-        window.location.href = "usuario-productos.html";
+        window.location.href = "todos-los-productos.html";
 
     }
 });

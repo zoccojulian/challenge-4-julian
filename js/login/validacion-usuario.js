@@ -1,5 +1,8 @@
 import { usuarios } from "./usuarios.js";
 
+/*variable de verificación si hay algun usuario logueado*/
+let usuarioOnLine = false;
+
 
 const formularioLogin = document.querySelector(".login__form");
 
@@ -21,7 +24,11 @@ formularioLogin.addEventListener("submit",(event) => {
         document.querySelector(".login__error").classList.add("input__invalido");
     }else{
         document.querySelector(".login__error").classList.remove("input__invalido");
-        window.location.href = "usuario-productos.html";
+
+        usuarioOnLine = true; /*logueado*/
+        sessionStorage.setItem ("usuario-ok", JSON.stringify(usuarioOnLine));/*pone en true que el usuario esta logueado*/
+
+        window.location.href = "todos-los-productos.html";
     }
 
 });
