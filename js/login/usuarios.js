@@ -29,8 +29,15 @@ const btnAgregarProducto = () => {
     btnAgregar.style.display = "flex";
 }
 
+const btnModificar = () => {
+    const botones = document.querySelector(".producto__modificar");
+
+    botones.style.visibility = "visible";
+};
+
 export const controlUsuarioOk = {
     verUsuarioOnline,
     btnSalir,
-    btnAgregarProducto
+    btnAgregarProducto,
+    btnModificar
 }
