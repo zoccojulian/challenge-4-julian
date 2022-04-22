@@ -1,6 +1,7 @@
 
 
-/*Muestra la imagen seleccionada para agregar en el nuevo producto y deja la URL del archivo para usar luego*/
+/*Muestra la imagen seleccionada para agregar en el nuevo producto
+y deja la URL del archivo para usar luego*/
 
 const btnAgregarImagen = document.querySelector(".agregar__imagen");
 

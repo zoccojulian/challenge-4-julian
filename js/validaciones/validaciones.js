@@ -1,6 +1,12 @@
+
+
+
 export const validarInput = (input) =>{
+
+    /*me fijo el data-atribut a ver que input es*/
     const tipoDeInput = input.dataset.input;
 
+    /*si validity es false, imprimo el error y cambio atributos a rojo*/
     if(input.validity.valid){
         input.parentElement.classList.remove("input__invalido");
         input.parentElement.querySelector(".mensaje__error").innerHTML = "";
@@ -11,11 +17,14 @@ export const validarInput = (input) =>{
     
 };
 
+/*array de tipos de errores que controlo*/
 const tipoDeErrores = [
     "valueMissing",
     "patternMismatch"
 ];
 
+/*array con objetos que tienen, para aca data-atribut, sus
+errores y los mensajes que deben imprimir*/
 const mensajesDeError = {
     nombre_footer:{
         valueMissing:"El campo Nombre no puede estar vacío"
@@ -42,6 +51,9 @@ const mensajesDeError = {
 }
 
 
+/*recorre los errores del input del array de errores, y chequea
+si alguno del input.validity de esos errores esta en true, si es
+asi, imprime el mensaje de error correspondiente*/
 const imprimirMensaje = (tipoDeInput,input) => {
     let mensaje = "";
 

@@ -57,10 +57,7 @@
     border: 1px solid var(--azul);
     color: var(--azul);
     width: 100%;
-    max-width: ;
     height: 50px;
-
-    
 }
 
 input[type="file"]#input__imagen{
