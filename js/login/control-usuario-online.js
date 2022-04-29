@@ -12,11 +12,5 @@ if(controlUsuarioOk.verUsuarioOnline()){
     if (document.querySelector(".productos__todos")){
         controlUsuarioOk.btnAgregarProducto();
     };
-
-    /*si estoy en la página "ver producto", habilito los
-    botones de borrar y modificar*/
-    if (document.querySelector(".productos")){
-        controlUsuarioOk.btnModificar();
-    };
 }
 

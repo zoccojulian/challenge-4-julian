@@ -1,4 +1,5 @@
 
+import { clienteService } from "../service/client-service.js";
 
 /*Muestra la imagen seleccionada para agregar en el nuevo producto
 y deja la URL del archivo para usar luego*/
@@ -11,15 +12,14 @@ btnAgregarImagen.addEventListener('change', cargar);
 
 function cargar(ev) {
     var arch = new FileReader();
-    arch.addEventListener('load',leer);
     arch.readAsDataURL(ev.target.files[0]);
-
-    fileImagen = ev.target.files[0];
+    /*fileImagen = ev.target.files[0];*/
+    arch.addEventListener('load',leer);
 }
 
 function leer(ev) {
     document.getElementById('box__imagen').style.backgroundImage = "url('" + ev.target.result + "')";
-
+    fileImagen = ev.target.result;
     document.querySelector(".archivo__faltante").parentElement.classList.remove("input__invalido");
 }
 
@@ -36,7 +36,19 @@ formAgregarProducto.addEventListener("submit", (evento) => {
         document.querySelector(".archivo__faltante").parentElement.classList.add("input__invalido");
 
     }else{
-        window.location.href = "todos-los-productos.html";
+        
+        const nombre = document.querySelector(".agregar__form__nombre-input").value;
+
+        const precio = document.querySelector(".agregar__form__precio-input").value;
+
+        const seccion = document.querySelector(".agregar__seccion").value;
+
+        const descripcion = document.querySelector(".agregar__descripcion").value;
+        
+
+        clienteService.agregarProducto(fileImagen,seccion,nombre,precio,descripcion).then((respuesta) => {
+            window.location.href ="agregar-concluido.html"
+        }).catch((error) => console.log(error));
 
     }
 });

@@ -20,10 +20,10 @@
     <header class="header">
         <div class="header__cabeza">
             <h1 class="header__logo-img"><a href="index.html"><img src="./img/Logo.png" alt="Logo Alura Geek"></a></h1>
-            <div class="header__input header__input-fuera">
+            <form class="header__input header__input-fuera">
                 <input type="text" class="header__input-texto" placeholder="¿Qué estás buscando?">
                 <button class="header__input-boton"><img src="./img/Icone_lupa.png" alt="Icono Lupa"></button>
-            </div>
+            </form>
         </div>
         <a href="login.html" class="header__login">Login</a>
         <button class="header__hamburguesa"><img src="./img/Icone_lupa.png" alt="Icono Lupa"></button>
@@ -35,7 +35,7 @@
                 <h3>Agregar nuevo producto</h3>
             </div>
             <div class="agregar__box">
-                <form class="agregar__form">
+                <form class="agregar__form" id="agregar__form">
                     <div class="agregar__form__imagen">
                         <div class="agregar__imagen-div" id="box__imagen"></div>
                         <label for="input__imagen" class="input__image-label"> Elegir archivo</label>
@@ -43,6 +43,15 @@
                     </div>
                     <div class="falta__carga__archivo">
                         <span class="mensaje__error archivo__faltante">Debe seleccionar un archivo de imagen para cargar en el producto</span>
+                    </div>
+                    <div class="agregar__form__seccion">
+                        <label for="seccion">Elegir Sección</label>
+                        <select name="seccion" id="seccion" class="agregar__seccion" form="agregar__form" required>
+                            <option value="" disabled selected hidden></option>
+                            <option value="Starwar">Starwar</option>
+                            <option value="Consolas">Consolas</option>
+                            <option value="Diversos">Diversos</option>
+                        </select>
                     </div>
                     <div class="agregar__form__nombre">
                         <label for="agregar__nombre" class="agregar__form__nombre-label agrear_input__label">Nombre del producto</label>
@@ -104,8 +113,10 @@
             <h3 class="footer__desarrollador-año" >2022</h3>
         </secction>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js" integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./js/header-animaciones.js"></script>
-    <script src="./js/agregar-producto/agregar-producto.js"></script>
+    <script type="module" src="./js/controllers/agregar-producto-controller.js"></script>
+    <script type="module" src="./js/controllers/buscar-barra-constroller.js"></script>
     <script type="module" src="./js/validaciones/valida-input.js"></script>
     <script type="module" src="./js/login/control-usuario-online.js"></script>
     

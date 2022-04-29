@@ -64,6 +64,26 @@ input[type="file"]#input__imagen{
     display: none;
 }
 
+.agregar__form__seccion{
+    justify-content: center;
+    margin-top: 1rem;
+    width:100%;
+    font-size: 1.3em;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.agregar__seccion{
+    width:150px;
+    height: 2rem;
+    font-size: .8em;
+}
+
+.falta__seccion{
+    text-align: center;
+}
+
 
 .agregar__form__nombre, .agregar__form__precio, .agregar__form__descripcion{
     box-sizing: border-box;
@@ -121,6 +141,7 @@ input[type="file"]#input__imagen{
   }
 
 @media screen and (min-width: 768px){
+    
     .agregar__form__imagen{
         flex-direction: row;
         justify-content:space-evenly;
@@ -133,5 +154,12 @@ input[type="file"]#input__imagen{
 
     .input__image-label{
         width: 45%;
+    }
+}
+
+@media screen and (min-width: 1440px){
+
+    .agregar{
+        padding-top: 5rem;
     }
 }

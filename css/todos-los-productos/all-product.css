@@ -34,6 +34,16 @@
     color: var(--texto-blanco);
 }
 
+/*sobre escribe el productos.css para que los hijos 5 y 6 aparezca*/
+.productos__venta .productos__venta-articulo:nth-child(5), .productos__venta .productos__venta-articulo:nth-child(6){
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin-bottom: 1.5rem;
+    margin-right: .2rem;
+}
+
 @media screen and (min-width: 768px){
     .productos__header{
         flex-direction: row;

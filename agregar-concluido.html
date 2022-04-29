@@ -11,9 +11,7 @@
     <link href="./css/colores.css" rel="stylesheet">
     <link href="./css/page.css" rel="stylesheet">
     <link href="./css/header.css" rel="stylesheet">
-    <link href="./css/banner.css" rel="stylesheet">
-    <link href="./css/productos.css" rel="stylesheet">
-    <link href="./css/todos-los-productos/all-product.css" rel="stylesheet">
+    <link href="./css/edicion-concluida/edicion-concluida.css" rel="stylesheet">
     <link href="./css/footer.css" rel="stylesheet">
     <link href="./css/mensaje-error/mensaje-error.css" rel="stylesheet">
 </head>
@@ -30,15 +28,15 @@
         <a href="login.html" class="header__login">Login</a>
         <button class="header__hamburguesa"><img src="./img/Icone_lupa.png" alt="Icono Lupa"></button>
     </header>
+    
     <main>
-        <section class="productos__todos">
-            <div class="productos__header">
-                <h3 class="producto__header-titulo">Todos los productos</h3>
-                <a href="agregar-producto.html" class="producto__header__link">Agregar producto</a>
+        <section class="edicion__concluida">
+            <div class="caja">
+                <i class="fa-solid fa-circle-check"></i>
+                <h4>Producto agregado con Éxito!</h4>
+                <a href="todos-los-productos.html">Productos</a>
             </div>
-            <div class="productos__venta">
-                
-            </div>
+        </section>
     </main>
 
     <footer class="footer">
@@ -75,16 +73,12 @@
             <h3 class="footer__desarrollador-año" >2022</h3>
         </secction>
     </footer>
-
-    <script type="module" src="./js/controllers/todos-los-productos-controller.js"></script>
-    <script type="module" src="./js/controllers/buscar-barra-constroller.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="./js/header-animaciones.js"></script>
+    <script type="module" src="./js/controllers/buscar-barra-constroller.js"></script>
     <script type="module" src="./js/validaciones/valida-input.js"></script>
     <script type="module" src="./js/login/control-usuario-online.js"></script>
     
-
- 
-
-
+    
 </body>
 </html>

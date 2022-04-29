@@ -39,7 +39,6 @@ const btnAgregarProducto = () => {
 para que aparezca*/
 const btnModificar = () => {
     const botones = document.querySelector(".producto__modificar");
-
     botones.style.visibility = "visible";
 };
 

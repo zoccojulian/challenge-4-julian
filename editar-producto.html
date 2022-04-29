@@ -11,9 +11,7 @@
     <link href="./css/colores.css" rel="stylesheet">
     <link href="./css/page.css" rel="stylesheet">
     <link href="./css/header.css" rel="stylesheet">
-    <link href="./css/banner.css" rel="stylesheet">
-    <link href="./css/productos.css" rel="stylesheet">
-    <link href="./css/todos-los-productos/all-product.css" rel="stylesheet">
+    <link href="./css/agregar-producto/agregar-producto.css" rel="stylesheet">
     <link href="./css/footer.css" rel="stylesheet">
     <link href="./css/mensaje-error/mensaje-error.css" rel="stylesheet">
 </head>
@@ -30,15 +28,55 @@
         <a href="login.html" class="header__login">Login</a>
         <button class="header__hamburguesa"><img src="./img/Icone_lupa.png" alt="Icono Lupa"></button>
     </header>
+    
     <main>
-        <section class="productos__todos">
-            <div class="productos__header">
-                <h3 class="producto__header-titulo">Todos los productos</h3>
-                <a href="agregar-producto.html" class="producto__header__link">Agregar producto</a>
+        <section class="agregar">
+            <div class="agregar__titulo">
+                <h3>Editar Producto</h3>
             </div>
-            <div class="productos__venta">
-                
+            <div class="agregar__box">
+                <form class="agregar__form" id="agregar__form">
+                    <div class="agregar__form__imagen">
+                        <div class="agregar__imagen-div" id="box__imagen"></div>
+                        <label for="input__imagen" class="input__image-label"> Elegir archivo</label>
+                        <input type="file" class="agregar__imagen input" id="input__imagen" data-input="imagen_agregar_producto" accept="image/*">
+                    </div>
+                    <div class="falta__carga__archivo">
+                        <span class="mensaje__error archivo__faltante">Debe seleccionar un archivo de imagen para cargar en el producto</span>
+                    </div>
+                    <div class="agregar__form__seccion">
+                        <label for="seccion">Elegir Sección</label>
+                        <select name="seccion" id="seccion" class="agregar__seccion" form="agregar__form" required>
+                            <option value="" disabled selected hidden></option>
+                            <option value="Starwar">Starwar</option>
+                            <option value="Consolas">Consolas</option>
+                            <option value="Diversos">Diversos</option>
+                        </select>
+                    </div>
+                    <div class="agregar__form__nombre">
+                        <label for="agregar__nombre" class="agregar__form__nombre-label agrear_input__label">Nombre del producto</label>
+                        <input type="text" class="agregar__form__nombre-input agregar__input input" id="agregar__nombre" maxlength="20" required data-input="nombre_agregar_producto">
+                        <span class="mensaje__error"></span>
+                    </div>
+                    <div class="agregar__form__precio">
+                        <label for="agregar__precio" class="agregar__form__precio-label agrear_input__label">Precio del producto</label>
+                        <input type="number" class="agregar__form__precio-input agregar__input input" id="agregar__precio" pattern="^\d+[,]\d{2}$" required data-input="precio_agregar_producto">
+                        <span class="mensaje__error"></span>
+                    </div>
+                    <div class="agregar__form__descripcion">
+                        <label for="agregar__descripcion" class="agregar__form__descripcion-label agrear_input__label">Descripción</label>
+                        <textarea  class="agregar__descripcion agregar__input input" id="agregar__descripcion" maxlength="150" required data-input="descripcion_agregar_producto"></textarea>
+                        <span class="mensaje__error"></span>
+                    </div>
+
+                    <div class="agregar__form__enviar">
+                        <button class="agregar__enviar">
+                                    Modificar
+                         </button>
+                    </div>
+                </form>
             </div>
+        </section>
     </main>
 
     <footer class="footer">
@@ -75,16 +113,12 @@
             <h3 class="footer__desarrollador-año" >2022</h3>
         </secction>
     </footer>
-
-    <script type="module" src="./js/controllers/todos-los-productos-controller.js"></script>
-    <script type="module" src="./js/controllers/buscar-barra-constroller.js"></script>
     <script src="./js/header-animaciones.js"></script>
+    <script type="module" src="./js/controllers/editar-producto-controller.js"></script>
+    <script type="module" src="./js/controllers/buscar-barra-constroller.js"></script>
     <script type="module" src="./js/validaciones/valida-input.js"></script>
     <script type="module" src="./js/login/control-usuario-online.js"></script>
     
-
- 
-
-
+    
 </body>
 </html>
