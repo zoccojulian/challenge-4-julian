@@ -5,7 +5,7 @@ const cardProducto = (producto) => {
             <img src="${producto.imagen}" alt="">
         </div>
         <h3 class="producto__venta-titulo">${producto.nombre}</h3>
-        <h4 class="producto__venta-precio">${producto.precio}</h4>
+        <h4 class="producto__venta-precio">$ ${producto.precio}</h4>
         <a class="producto__venta-link" href="producto.html?id=${producto.id}">Ver producto</a>`;
 
     const divCard = document.createElement("div");
