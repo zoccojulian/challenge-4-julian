@@ -43,6 +43,11 @@ los ordena descendentemente, */
 const seisProductosSeccion = (seccion) => fetch(`${url}?seccion=${seccion}&_sort=id&_order=desc&_limit=6`)
 .then((respuesta) => respuesta.json())
     .catch((error) => error)
+
+
+const buscarSearch = (palabra) => fetch(`${url}?nombre_like=${palabra}`)
+.then((respuesta) => respuesta.json())
+    .catch((error) => error)
         
 export const clienteService = {
     listaProductos,
@@ -51,7 +56,8 @@ export const clienteService = {
     modificarProducto,
     borrarProducto,
     productosSimilares,
-    seisProductosSeccion
+    seisProductosSeccion,
+    buscarSearch
 
 }
 
