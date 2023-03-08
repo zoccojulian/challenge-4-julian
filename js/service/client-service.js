@@ -1,7 +1,9 @@
 
 /*const url = "http://localhost:3000/productos_alurageek"*/
 
-const url = "https://json-alurageek-challenge.herokuapp.com/productos_alurageek"
+const url = "https://sunset-tidy-spur.glitch.me/productos_alurageek"
+
+// const url = "https://json-alurageek-challenge.herokuapp.com/productos_alurageek"
 
 const listaProductos = () => fetch(`${url}`).then((respuesta) => respuesta.json()).catch((error) => error);
 
